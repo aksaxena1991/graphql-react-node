@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "graphql": "^16.6.0",
+    "mysql2": "^3.2.4",
+    "typeorm": "^0.3.15"
+  }
+}
