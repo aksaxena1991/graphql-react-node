@@ -3,16 +3,19 @@ import {graphqlHTTP} from 'express-graphql'
 import cors from 'cors'
 import {createConnection} from 'typeorm'
 import { schema } from './Schema'
+import { User } from './Entities/User'
 
 const main = async () =>{
     await createConnection({
         type:"mysql",
-        database:"GraphQLCrud",
+        database:"graphqlcrud",
         username:"root",
         password:"root",
         logging:true,
-        synchronize:false,
-        entities: []
+        synchronize:true,
+        entities: [
+            User
+        ]
 
     })
     const app = express()
